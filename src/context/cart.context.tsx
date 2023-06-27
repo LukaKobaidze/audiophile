@@ -67,7 +67,7 @@ export function CartProvider(props: Props) {
   useEffect(() => {
     itemKeys.forEach((id) => {
       if (items[Number(id)]?.data) return;
-      fetch(`http://localhost:3000/api/cart/${id}`)
+      fetch(`${process.env.API_URL}/cart/${id}`)
         .then((response) => response.json())
         .then(({ data }) =>
           setItems((state) => ({

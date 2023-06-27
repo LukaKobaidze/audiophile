@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function CategoryPage({ params }: Props) {
   const { data }: { data: CategoryProductInterface[] } = await fetch(
-    `http://localhost:3000/api/${params.category}`
+    `${process.env.API_URL}/${params.category}`
   ).then((res) => res.json());
 
   return (
