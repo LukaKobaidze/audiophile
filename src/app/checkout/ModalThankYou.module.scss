@@ -1,0 +1,145 @@
+.container {
+  padding: 48px 0 48px 48px;
+  width: 95vw;
+  max-width: 540px;
+  top: calc(var(--header-height) + 15px);
+  transform: translateX(-50%);
+  z-index: 11;
+  max-height: calc(100vh - var(--header-height) - 30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  margin-bottom: 33px;
+}
+
+.contentWrapper {
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 48px;
+
+  padding-bottom: 24px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 23px;
+  }
+
+  @media (max-width: 540px) {
+    padding-bottom: 11.5px;
+  }
+}
+
+.heading {
+  margin-bottom: 24px;
+
+  & > span {
+    display: block;
+  }
+}
+
+.paragraph {
+  color: var(--clr-7--50);
+  margin-bottom: 33px;
+}
+
+.button {
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
+}
+
+.items {
+  width: 246px;
+  padding: 24px 24px 12px 24px;
+  background-color: var(--clr-3);
+
+  @media (max-width: 540px) {
+    width: 100%;
+  }
+}
+
+.oneProduct {
+  margin-bottom: 12px;
+}
+
+.grandTotal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 32px;
+  color: var(--clr-6);
+  background-color: var(--clr-7);
+  flex-grow: 1;
+
+  &Extended {
+    justify-content: flex-end;
+    padding-bottom: 41px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 15px 0 19px 24px;
+  }
+
+  &Text {
+    font-size: 15px;
+    color: var(--clr-6--50);
+    line-height: 25px;
+    margin-bottom: 8px;
+  }
+
+  &Price {
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+  }
+}
+
+.btnWrapper {
+  margin-top: 24px;
+  padding-right: 48px;
+
+  @media (max-width: 768px) {
+    margin-top: 23px;
+  }
+
+  @media (max-width: 540px) {
+    margin-top: 11.5px;
+  }
+}
+
+.btnMore {
+  position: relative;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: -0.21px;
+  font-weight: var(--fw-bold);
+  color: var(--clr-7--50);
+  width: 100%;
+  padding: 12px 0;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-7);
+    opacity: 0.08;
+    top: 0;
+    left: 0;
+  }
+}
+
+.productExtended {
+  margin-bottom: 12px;
+}

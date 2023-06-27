@@ -1,0 +1,22 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: calc(100vh);
+  background-color: #000000;
+  opacity: 0.4;
+  z-index: 10;
+  animation: fadeIn 200ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}

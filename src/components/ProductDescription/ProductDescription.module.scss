@@ -1,0 +1,28 @@
+.container {
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.new {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.paragraph {
+  color: var(--clr-6--75);
+  width: 95%;
+  margin-top: 32px;
+
+  @media (max-width: 375px) {
+    margin-top: 32px;
+  }
+}
+
+.button {
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    margin-top: 24px;
+  }
+}

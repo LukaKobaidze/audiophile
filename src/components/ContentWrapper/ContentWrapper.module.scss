@@ -1,0 +1,9 @@
+.wrapper {
+  width: 89.71354166666667%;
+  max-width: var(--layout-content-maxwidth);
+  margin: 0 auto;
+
+  @media (max-width: 375px) {
+    width: 87.201%;
+  }
+}

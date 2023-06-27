@@ -1,0 +1,143 @@
+.footer {
+  --padding-top: 75px;
+  position: relative;
+  background-color: var(--clr-2);
+  color: var(--clr-6);
+  padding-top: var(--padding-top);
+  padding-bottom: 48px;
+
+  @media (max-width: 768px) {
+    --padding-top: 60px;
+    padding-bottom: 46px;
+  }
+
+  @media (max-width: 420px) {
+    text-align: center;
+    --padding-top: 52px;
+    padding-bottom: 38px;
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--padding-top) * -1);
+    left: 0;
+    height: 4px;
+    width: 101px;
+    background-color: var(--clr-1);
+
+    @media (max-width: 420px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 420px) {
+    padding-bottom: 72px;
+  }
+}
+
+.logoAndNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 36px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    & > :first-child {
+      margin-bottom: 32px;
+
+      @media (max-width: 420px) {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    align-items: center;
+  }
+}
+
+.navigation {
+  @media (max-width: 475px) {
+    width: 100%;
+  }
+
+  &List {
+    @media (max-width: 475px) {
+      --gap: 0px;
+    }
+
+    @media (max-width: 420px) {
+      flex-direction: column;
+      align-items: center;
+
+      & > *:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.paragraph {
+  width: 48.65%;
+  color: var(--clr-6--50);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.copyright {
+  margin-top: 56px;
+}
+
+.socials {
+  display: flex;
+  position: absolute;
+  bottom: 88px;
+  right: 0;
+  margin-left: auto;
+
+  @media (max-width: 768px) {
+    bottom: 0;
+  }
+
+  @media (max-width: 420px) {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &Button {
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    & > * {
+      display: block;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &:focus-visible {
+      color: var(--clr-1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--clr-1);
+      }
+    }
+  }
+}

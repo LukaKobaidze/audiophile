@@ -1,0 +1,127 @@
+.cartButtonWrapper {
+  position: relative;
+  height: 75%;
+}
+
+.cartButton {
+  background: none;
+  border: none;
+  height: 100%;
+  cursor: pointer;
+
+  &Quantity {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    font-size: 12px;
+    padding: 1px 6px;
+    border-radius: 6px;
+    background-color: var(--clr-1);
+    color: var(--clr-6);
+    transform: translateX(75%);
+    opacity: 0;
+    transition: opacity 200ms;
+    pointer-events: none;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+}
+
+.cart {
+  position: absolute;
+  left: initial;
+  top: 129px;
+  right: 0;
+  transform: initial;
+  background-color: var(--clr-6);
+  color: var(--clr-7);
+  border-radius: 8px;
+  z-index: 11;
+  padding: 31px 0;
+  width: 377px;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 129px);
+
+  @media (max-width: 768px) {
+    top: 114px;
+  }
+
+  @media (max-width: 425px) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  &Header,
+  &Footer,
+  &ItemsWrapper {
+    padding: 0 33px;
+
+    @media (max-width: 375px) {
+      padding: 0 25px;
+    }
+  }
+
+  &Header,
+  &Total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &ItemsWrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 32px;
+  }
+
+  &ItemsList {
+    text-align: center;
+  }
+
+  &Item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &Empty {
+    display: block;
+    text-align: center;
+    color: var(--clr-7--50);
+    font-weight: var(--fw-bold);
+    padding-top: 50px;
+    padding-bottom: 75px;
+  }
+
+  &TextTotal {
+    color: var(--clr-7--50);
+  }
+
+  &Price {
+    font-size: 18px;
+    font-weight: var(--fw-bold);
+  }
+
+  button.cartBtnRemoveAll {
+    padding: 0;
+    height: 100%;
+    font-size: 15px;
+    font-weight: var(--fw-medium);
+  }
+
+  &Footer {
+    margin-top: 32px;
+  }
+
+  &CheckoutAnchor {
+    width: 100%;
+    display: block;
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,95 @@
+.loadingSkeleton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
+
+  &Description {
+    width: 40.136%;
+    min-width: 339.5px;
+
+    @media (max-width: 650px) {
+      min-width: initial;
+      width: 100%;
+    }
+  }
+
+  &Img,
+  &Overline,
+  &Heading > div,
+  &Paragraph > div,
+  &Button {
+    display: block;
+    background-color: #000000;
+    border-radius: 3px;
+    animation: skeletonLoading 1s linear infinite alternate;
+  }
+
+  &Img {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 540px;
+    min-height: 560px;
+    margin-right: 10.015%;
+
+    @media (max-width: 700px) {
+      margin-right: 4%;
+    }
+
+    @media (max-width: 650px) {
+      margin-right: 0;
+      width: 100%;
+      height: 90.4vw;
+      min-height: initial;
+      margin-bottom: 32px;
+    }
+  }
+
+  &Overline {
+    width: 199px;
+    height: 14px;
+  }
+
+  &Heading {
+    padding-top: 16px;
+    width: 285px;
+
+    & > div {
+      height: 30px;
+      margin-top: 14px;
+    }
+  }
+
+  &Paragraph {
+    padding-top: 32px;
+    width: 100%;
+
+    & > div {
+      height: 11px;
+      margin-top: 14px;
+    }
+
+    & > :last-child {
+      width: 85%;
+    }
+  }
+
+  &Button {
+    width: 160px;
+    height: 48px;
+    border-radius: 0;
+    margin-top: 30px;
+  }
+}
+
+@keyframes skeletonLoading {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.075;
+  }
+}

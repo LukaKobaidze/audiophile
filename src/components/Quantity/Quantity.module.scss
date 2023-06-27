@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-3);
+  width: 120px;
+  font-weight: var(--fw-bold);
+  font-size: 13px;
+}
+
+button.button {
+  padding: 0 15.5px;
+  height: 100%;
+  font-size: 17px;
+  color: var(--clr-7--25);
+}

@@ -1,0 +1,127 @@
+.container {
+  --margin: 16px;
+  background-color: var(--clr-3);
+  padding-top: var(--header-height);
+}
+
+.wrapper {
+  padding-bottom: 141px;
+}
+
+.goBack {
+  font-size: 15px;
+  padding: 0;
+  line-height: 25px;
+  margin-top: 79px;
+  margin-bottom: 38px;
+  font-weight: var(--fw-medium);
+
+  @media (max-width: 768px) {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 16px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+
+  @media (max-width: 925px) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  & > div {
+    background-color: var(--clr-6);
+    border-radius: 8px;
+  }
+}
+
+.checkout {
+  flex-grow: 1;
+  padding: 54px 48px 48px 48px;
+
+  @media (max-width: 1025px) {
+    padding: 30px 27px 30px 27.5px;
+  }
+
+  &Heading {
+    margin-bottom: 41px;
+  }
+}
+
+.summary {
+  position: sticky;
+  top: 126px;
+  width: 350px;
+  margin-left: 30px;
+  padding: 32px 0 32px 33px;
+  flex-shrink: 0;
+
+  @media (max-width: 1025px) {
+    width: 325px;
+    margin-left: 15px;
+  }
+
+  @media (max-width: 925px) {
+    width: auto;
+    position: initial;
+    margin-left: 0;
+    margin-top: 32px;
+    max-width: 689px;
+  }
+
+  &ItemsWrapper {
+    margin-top: 31px;
+    margin-bottom: 32px;
+    padding-right: 33px;
+    max-height: 32vh;
+    overflow-y: auto;
+  }
+
+  &Item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &Button {
+    width: 100%;
+    margin-top: 32px;
+
+    &Wrapper {
+      padding-right: 33px;
+    }
+  }
+
+  &Price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 33px;
+
+    & > :first-child {
+      text-transform: uppercase;
+      font-size: 15px;
+      color: var(--clr-7--50);
+      line-height: 25px;
+    }
+
+    & > :last-child {
+      font-size: 18px;
+      font-weight: var(--fw-bold);
+    }
+
+    &GrandTotal {
+      margin-top: 24px;
+
+      & > :last-child {
+        color: var(--clr-1);
+      }
+    }
+  }
+}

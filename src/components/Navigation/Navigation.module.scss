@@ -1,0 +1,41 @@
+.navigation {
+  color: var(--clr-6);
+  --gap: 34px;
+
+  & * {
+    height: 100%;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+
+  &Item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: var(--gap);
+    }
+
+    &Anchor {
+      display: flex;
+      align-items: center;
+      color: currentColor;
+      text-decoration: none;
+      font-size: 13px;
+      line-height: 24px;
+      letter-spacing: 2px;
+
+      &:focus-visible {
+        color: var(--clr-1);
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: var(--clr-1);
+        }
+      }
+    }
+  }
+}

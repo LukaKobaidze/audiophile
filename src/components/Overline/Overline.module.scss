@@ -1,0 +1,13 @@
+.overline {
+  font-weight: var(--fw-regular);
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 19px;
+  letter-spacing: 10px;
+  color: var(--clr-1);
+
+  @media (max-width: 768px) {
+    letter-spacing: 8.57px;
+    font-size: 12px;
+  }
+}

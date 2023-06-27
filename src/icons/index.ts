@@ -1,0 +1,9 @@
+export { default as IconArrowRight } from './icon-arrow-right.svg';
+export { default as IconCart } from './icon-cart.svg';
+export { default as IconCashOnDelivery } from './icon-cash-on-delivery.svg';
+export { default as IconFacebook } from './icon-facebook.svg';
+export { default as IconHamburger } from './icon-hamburger.svg';
+export { default as IconInstagram } from './icon-instagram.svg';
+export { default as IconOrderConfirmation } from './icon-order-confirmation.svg';
+export { default as IconTwitter } from './icon-twitter.svg';
+export { default as Logo } from './logo.svg';

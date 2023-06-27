@@ -1,0 +1,17 @@
+.categories {
+  padding-top: 160px;
+
+  @media (max-width: 768px) {
+    padding-top: 120px;
+  }
+}
+
+.aboutUs {
+  margin-top: 160px;
+  margin-bottom: 160px;
+
+  @media (max-width: 768px) {
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+}

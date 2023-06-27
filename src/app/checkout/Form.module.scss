@@ -1,0 +1,90 @@
+.cashOnDelivery {
+  display: flex;
+  align-items: center;
+  color: var(--clr-7--50);
+  margin-top: 30px;
+
+  &Icon {
+    flex-shrink: 0;
+    margin-right: 32px;
+  }
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.21px;
+  margin-bottom: 9px;
+}
+
+.input {
+  width: 100%;
+}
+
+.radio {
+  margin-left: auto;
+}
+
+.group {
+  display: flex;
+
+  & > * {
+    width: 50%;
+
+    @media (max-width: 570px) {
+      width: 100%;
+    }
+  }
+
+  & > :first-child {
+    margin-right: var(--margin);
+  }
+
+  &Payment {
+    & > :first-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 570px) {
+    flex-direction: column;
+
+    & > :first-child {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.subtitle {
+  display: block;
+  margin-bottom: 16px;
+
+  &Shipping {
+    margin-top: 29px;
+  }
+
+  &Payment {
+    margin-top: 37px;
+  }
+
+  @media (max-width: 570px) {
+    &Shipping,
+    &Payment {
+      margin-top: 32px;
+    }
+  }
+}
+
+.marginTop {
+  margin-top: 24px;
+}
+
+.single {
+  width: calc(50% - var(--margin) / 2);
+  margin-top: 24px;
+
+  @media (max-width: 570px) {
+    width: 100%;
+  }
+}

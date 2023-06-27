@@ -1,0 +1,145 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--clr-7);
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.categoryWrapper {
+  position: relative;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+
+    @media (max-width: 1000px) {
+      margin-right: 15px;
+    }
+
+    @media (max-width: 768px) {
+      margin-right: 10px;
+    }
+
+    @media (max-width: 550px) {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.category {
+  color: currentColor;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 263px;
+
+  @media (max-width: 768px) {
+    height: 217px;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .categoryShop {
+        color: var(--clr-1);
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    background-color: var(--clr-3);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 204px;
+    z-index: -1;
+    border-radius: 8px;
+
+    @media (max-width: 768px) {
+      height: 165px;
+    }
+  }
+
+  &Name {
+    margin-top: auto;
+    font-weight: var(--fw-bold);
+    font-size: 18px;
+    letter-spacing: 1.29px;
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+      letter-spacing: 1.07px;
+    }
+  }
+
+  &Shop {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 30px;
+    margin-top: 15px;
+    color: var(--clr-7--50);
+
+    @media (max-width: 768px) {
+      margin-bottom: 22px;
+      margin-top: 17px;
+    }
+
+    &Icon {
+      margin-left: 13px;
+    }
+  }
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  position: absolute;
+  pointer-events: none;
+  width: 220px;
+
+  @media (max-width: 900px) {
+    width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 153px;
+  }
+
+  &Headphones {
+    top: -22px;
+
+    @media (max-width: 768px) {
+      width: 145px;
+      top: 0px;
+    }
+  }
+
+  &Speakers {
+    top: -15px;
+
+    @media (max-width: 768px) {
+      top: 0;
+    }
+  }
+
+  &Earphones {
+    @media (max-width: 768px) {
+      width: 180px;
+    }
+  }
+}
