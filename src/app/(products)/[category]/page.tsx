@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { CategoryProductInterface } from '@/types';
+import { getCategoryProducts } from '@/helpers';
 import {
   ProductDescription,
   ProductDescriptionLoading,
@@ -34,9 +34,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CategoryPage({ params }: Props) {
-  const { data }: { data: CategoryProductInterface[] } = await fetch(
-    `${process.env.API_URL}/${params.category}`
-  ).then((res) => res.json());
+  const data = getCategoryProducts(params.category);
 
   return (
     <>

@@ -1,12 +1,11 @@
 import { Metadata } from 'next';
-import { fetchAllProducts, fetchProduct } from '@/helpers/fetch';
+import { productsData } from '@/data/products';
+import { getProduct } from '@/helpers';
 import Product from './Product';
 import NotFound from './NotFound';
 
 export async function generateStaticParams() {
-  const { data } = await fetchAllProducts();
-
-  return data.map((product) => ({
+  return productsData.map((product) => ({
     slug: product.slug,
   }));
 }
@@ -18,7 +17,7 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { data, error } = await fetchProduct(params.slug);
+  const data = getProduct(params.slug);
 
   const metadata: Metadata = {
     icons: {
@@ -26,7 +25,7 @@ export async function generateMetadata({ params }: Props) {
     },
   };
 
-  if (error) {
+  if (!data) {
     metadata.title = 'Product Not Found | Audiophile';
   } else {
     metadata.title = data.name + ' | Audiophile';
@@ -37,7 +36,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function ProductPage({ params }: Props) {
-  const { data, error } = await fetchProduct(params.slug);
+  const data = getProduct(params.slug);
 
-  return <>{error ? <NotFound /> : <Product data={data} />}</>;
+  return <>{!data ? <NotFound /> : <Product data={data} />}</>;
 }
