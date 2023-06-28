@@ -193,9 +193,11 @@
   }
 
   @media (max-width: 475px) {
-    display: block;
+    flex-direction: column;
     margin-top: 88px;
     --gap: 5.3334vw;
+    max-height: none;
+    height: 201.6vw;
   }
 
   & img {
@@ -212,6 +214,8 @@
     @media (max-width: 475px) {
       margin-right: 0;
       margin-bottom: var(--gap);
+      height: 100%;
+      width: 100%;
     }
 
     & > :first-child {
