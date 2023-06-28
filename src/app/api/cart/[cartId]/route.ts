@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import { productsData } from '@/data/products';
 import { CartProductInterface } from '@/types';
 import { getLastRoute } from '@/helpers/api_helpers';
@@ -19,6 +21,11 @@ export async function GET(req: Request) {
     image: product.cartImage,
     slug: product.slug,
   };
+
+  const imageFilePath = path.resolve('.', `./public/${data.image}`);
+  const imageBuffer = fs.readFileSync(imageFilePath);
+
+  new NextResponse(imageBuffer);
 
   return NextResponse.json({ data });
 }
