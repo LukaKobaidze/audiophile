@@ -1,9 +1,9 @@
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { IconOrderConfirmation } from '@/icons';
 import { CartItemsType } from '@/context/cart.context';
 import { Heading, Modal, Paragraph, ProductSmall } from '@/components';
 import styles from './ModalThankYou.module.scss';
-import Link from 'next/link';
 
 interface Props {
   items: CartItemsType;
@@ -64,7 +64,9 @@ export default function ModalThankYou(props: Props) {
                   className={styles.btnMore}
                   onClick={() => setShowMoreItems((state) => !state)}
                 >
-                  and {itemKeys.length - 1} other item(s)
+                  {showMoreItems
+                    ? 'View less'
+                    : `and ${itemKeys.length - 1} other item(s)`}
                 </button>
               )}
             </div>
